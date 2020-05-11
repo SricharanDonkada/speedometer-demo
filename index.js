@@ -4,4 +4,4 @@ app.get('/',(req,res)=>{
     res.end("Hello World");
 });
 
-app.listen(3000,()=>{console.log("server up on 3000")});
+app.listen(process.env.PORT || 3000,()=>{console.log("server up on 3000")});
