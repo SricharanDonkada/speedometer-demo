@@ -1,10 +1,10 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
 const cors = require('cors');
 
 app.use(cors());
-app.get('/',(req,res)=>{
-    res.end("working");
-});
+
+app.use(express.static("./public/speedometer"));
 
 app.get('/get-value',(req,res)=>{
     let val = Math.floor(Math.random() * 90 + 10);
